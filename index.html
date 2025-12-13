@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Oskar Mroczek">
+    <meta name="keywords" content="czołgi, druga wojna światowa, historia, wojskowość">
+    <meta name="description" content="Przewodnik po siedmiu najlepszych czołgach drugiej wojny światowej">
+    <title>7 Najlepszych Czołgów Drugiej Wojny Światowej</title>
+    <link rel="stylesheet" href="style.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');</style>
+        <style>
+     
+        .galeria { display:flex; justify-content:center; align-items:center; padding: 1rem; }
+        .galeria-image { width: min(90vw, 900px); height: clamp(240px, 40vw, 480px); background: none; position: relative; border-radius: 8px; box-shadow: 0 12px 30px rgba(0,0,0,0.18); overflow: hidden; }
+        .galeria-image .slide { position: absolute; inset: 0; background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; transition: none !important; animation: slideShow 12s steps(1, end) infinite; animation-fill-mode: both; }
+        .galeria-image .s1 { background-image: url('tygrys.jpg'); animation-delay: 0s; }
+        .galeria-image .s2 { background-image: url('Panther.jpg'); animation-delay: 2s; }
+        .galeria-image .s3 { background-image: url('tygrys2.jpg'); animation-delay: 4s; }
+        .galeria-image .s4 { background-image: url('IS-2.jpg'); animation-delay: 5s; }
+        @keyframes slideShow { 0% { opacity: 1; } 25% { opacity: 1; } 25.01% { opacity: 0; } 100% { opacity: 0; } }
+        @media (prefers-reduced-motion: reduce) {
+            .galeria-image .slide { animation: none; opacity: 0; }
+            .galeria-image .slide.s1 { opacity: 1; }
+        }
+        </style>
+</head>
+<body>
+
+<header>
+    <h1 class="animated-title">7 Najlepszych Czołgów II WŚ</h1>
+</header>
+
+<nav class="menu-desktop">
+    <ul>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#thetabela">Porównanie</a></li>
+        <li><a href="#ankieta">Ankieta</a></li>
+        <li><a href="https://tanks-encyclopedia.com/" target="_blank">Strona o Czołgach</a></li>
+    </ul>
+</nav>
+
+<nav class="menu-tablet">
+    <select onchange="navigateTo(this.value)" class="menu-select">
+        <option value="">Menu</option>
+        <option value="#galeria">Galeria</option>
+        <option value="#tabela">Porównanie</option>
+        <option value="#ankieta">Ankieta</option>
+        <option value="https://pl.wikipedia.org/wiki/Czołg">Wikipedia</option>
+    </select>
+</nav>
+
+<nav class="menu-mobile">
+    <div class="hamburger" onclick="toggleMobileMenu()">☰ Menu</div>
+    <ul id="mobile-menu" class="mobile-menu-list">
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#tabela">Porównanie</a></li>
+        <li><a href="#ankieta">Ankieta</a></li>
+        <li><a href="https://pl.wikipedia.org/wiki/Czołg" target="_blank">Wikipedia</a></li>
+    </ul>
+</nav>
+
+<section id="galeria" class="galeria-section">
+    <h2>Galeria Czołgów</h2>
+    <div class="galeria">
+        <div class="galeria-image" role="img" aria-label="Galeria czołgów" >
+            <span class="slide s1" aria-hidden="true"></span>
+            <span class="slide s2" aria-hidden="true"></span>
+            <span class="slide s3" aria-hidden="true"></span>
+            <span class="slide s4" aria-hidden="true"></span>
+        </div>
+    </div>
+</section>
+
+<section id="opis" class="opis-section">
+    <h2>O Czołgach</h2>
+    <p>Czołgi były kluczową bronią podczas drugiej wojny światowej. Poniżej lista siedmiu najlepszych modeli:</p>
+    <ol>
+        <li><strong>Tygrys I</strong> - niemiecki czołg ciężki</li>
+        <li><strong>Pantera</strong> - niemiecki czołg średni</li>
+        <li><strong>Jagdpantera</strong> - niemiecki niszczyciel czołgów</li>
+        <li><strong>IS-2</strong> - radziecki czołg ciężki</li>
+        <li><strong>T-34-85</strong> - radziecki czołg średni</li>
+        <li><strong>M4 Sherman</strong> - amerykański czołg średni</li>
+        <li><strong>M26 Pershing</strong> - amerykański czołg ciężki</li>
+        
+    </ol>
+</section>
+
+<section id="tabela" class="tabela-section">
+    <h2>Porównanie Czołgów</h2>
+    <table class="tabela-czolgi">
+        <thead>
+            <tr>
+                <th>Czołg</th>
+                <th>Kraj</th>
+                <th>Masa (t)</th>
+                <th>Główne Uzbrojenie</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tygrys I</td>
+                <td>Niemcy</td>
+                <td>57</td>
+                <td>88 mm</td>
+            </tr>
+            <tr>
+                <td>Pantera</td>
+                <td>Niemcy</td>
+                <td>45</td>
+                <td>75 mm</td>
+            </tr>
+
+            
+                <td>JagdPantera</td>
+                <td>Niemcy</td>
+                <td>45</td>
+                <td>88 mm</td>
+            </tr>
+            <tr>
+                <td>IS-2</td>
+                <td>ZSRR</td>
+                <td>46</td>
+                <td>122 mm</td>
+            </tr>
+            <tr>
+                <td>T-34-85</td>
+                <td>ZSRR</td>
+                <td>32</td>
+                <td>85 mm</td>
+            </tr>
+            <tr>
+                <td>M4 Sherman</td>
+                <td>USA</td>
+                <td>30</td>
+                <td>75 mm</td>
+                <tr>
+
+                <td>Pershing</td>
+                <td>USA</td>
+                <td>42</td>
+                <td>90 mm</td>
+
+
+
+                </tr>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="media" class="media-section">
+    <h2>Media</h2>
+    <div class="media-container">
+        <h3>Muzyka </h3>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7yCF65vpc7sUwPjftI0iFb?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </audio>
+        <h3>Film o czołgach</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gMSm7RY4R4k?si=lEH2n_K2-Y8AHZ6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+    </div>
+</section>
+
+<section id="mapa" class="mapa-section">
+    <h2>Mapa Miejsc Bitew</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2567670.4945159024!2d12.133333000000001!3d54!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470451c37b70e0d9%3A0x41f6fb7ee49568d0!2sPolska!5e0!3m2!1spl!2spl!4v1234567890" 
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<section id="ankieta" class="ankieta-section">
+    <h2>Ankieta - Ulubiony Czołg</h2>
+    <form class="formularz">
+        
+            Dane Respondenta
+            <label for="imie">Imię:</label>
+            <input type="text" id="imie" name="imie" required>
+
+            <label for="wiek">Wiek:</label>
+            <input type="number" id="wiek" name="wiek" min="1" max="120">
+        
+
+       
+           Ulubiony Czołg
+            <label><input type="radio" name="czolg" value="tygrys"> Tygrys I</label><br>
+            <label><input type="radio" name="czolg" value="pantera"> Pantera</label><br>
+            <label><input type="radio" name="czolg" value="is2"> IS-2</label><br>
+            <label><input type="radio" name="czolg" value="t34"> T-34-85</label><br>
+       
+
+        
+           Wybór Wielokrotny
+            <label><input type="checkbox" name="aspekty" value="szybkosc"> Szybkość</label><br>
+            <label><input type="checkbox" name="aspekty" value="uzbrojenie"> Uzbrojenie</label><br>
+            <label><input type="checkbox" name="aspekty" value="pancerz"> Pancerz</label><br>
+        
+
+        
+          Preferowany Kraj
+            <label for="kraj">Kraj:</label>
+            <select id="kraj" name="kraj">
+                <option value="">-- Wybierz --</option>
+                <option value="niemcy">Niemcy</option>
+                <option value="zsrr">ZSRR</option>
+                <option value="usa">USA</option>
+                <option value="inne">Inne</option>
+            </select>
+        
+
+        
+            <legend>Dodatkowe Komentarze</legend>
+            <textarea name="komentarz" rows="4" cols="40" placeholder="Twoja opinia..."></textarea>
+        
+
+        <div class="przyciski">
+            <button type="submit" class="btn-wyslij">Wyślij</button>
+            <button type="reset" class="btn-wyczysc">Wyczyść</button>
+        </div>
+    </form>
+</section>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <p> 2024 Oskar Mroczek kl.2ta | <a href="#galeria">Na górę</a></p>
+</footer>
+
+
+
+
+</body>
+</html>
